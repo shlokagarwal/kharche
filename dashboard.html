@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>in-wallet | Dashboard</title>
+  <meta name="description" content="group">
+  <meta name="author" content="group">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+ <!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+
+        <nav>
+                <div class="nav-wrapper">
+                  <a href="#" class="brand-logo center">in-wallet<i class="material-icons right">account_balance_wallet</i></a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Login</a></li>
+                    <li><a href="badges.html">Signup</a></li>
+                    <li><a href="collapsible.html">Contact Us</a></li>
+                  </ul>
+                </div>
+            </nav>
+
+
+    <div class="container" style="padding: 5%;">
+        <h4 style="text-align: center;">Your daily dashboard !</h4>
+            <table class="centered">
+                    <thead>
+                      <tr>
+                          <th>Category</th>
+                          <th>Expenditure</th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+                      <tr>
+                        <td>Food  & Beverages</td>
+                        <td>200</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>Clothes</td>
+                        <td>0</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>Fuel</td>
+                        <td>0</td>
+                        
+                      </tr>
+                      <tr>
+                            <td>Entertainment</td>
+                            <td>100</td>
+                            
+                          </tr>
+                          <tr>
+                                <td>Health</td>
+                                <td>0</td>
+                                
+                              </tr>
+                              <tr>
+                                    <td><b>Total</b></td>
+                                    <td>300</td>
+                                    
+                                  </tr>
+                    </tbody>
+                  </table>
+                  
+  <a class="btn-floating btn-large waves-effect waves-light green right" style="margin-top: 5%; "><i class="material-icons">add</i></a>
+        
+    </div>
+    <div class="container" style="padding: 15%;">
+      <p style="text-align: center;">Your monthly expenses summary !</p>
+      <canvas id="myChart" width="100" height="100" style="text-align: left;"></canvas>
+      <p style="text-align: center;">Your Daily expenses summary !</p>
+      <canvas id="myChart1" width="100" height="100" style="text-align: right;"></canvas>
+    </div>
+      
+      
+
+    
+    
+     
+                
+    
+    
+  <script src="js/scripts.js"></script>
+  <script>
+      var pie = document.getElementById('myChart');
+      var myChart = new Chart(pie, {
+    type: 'pie',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+var pie1 = document.getElementById('myChart1');
+      var myChart1 = new Chart(pie1, {
+    type: 'pie',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  </script>
+
+</body>
+</html>
